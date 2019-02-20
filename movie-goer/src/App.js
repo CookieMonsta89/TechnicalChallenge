@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import {AppDiv} from './App-Styled-components';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>MovieGoer App</h1>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <AppDiv>
+      <h1>Hello World</h1>
+    </AppDiv>
+  )
 }
 
 export default App;
