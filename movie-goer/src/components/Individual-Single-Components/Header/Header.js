@@ -14,7 +14,7 @@ const Header = () => {
         <HeaderDiv>
             <FlexDiv>
                 <Logo alt='logo' src={logo} />
-                <h1>Header</h1>
+                <h1>Ultimate Movie Goer</h1>
             </FlexDiv>
         </HeaderDiv>
     )
