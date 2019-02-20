@@ -10,13 +10,15 @@ export const HeaderDiv = styled.div`
 `;
 
 export const FlexDiv = styled.div`
-    width:90%;
+    width:80%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    color:white;
 `;
 
 export const Logo = styled.img` 
-    width:20%;
+    width:10%;
+    height:75%;
 `;
 
