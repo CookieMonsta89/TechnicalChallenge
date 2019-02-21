@@ -6,4 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%
 }
+
+/* Introduced 62.5% font-size so that I could rem font size for responsiveness going forward.
+  For example, 16px will be 1.6rem. Easy conversion. 
+*/

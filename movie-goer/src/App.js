@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import {AppDiv} from './App-Styled-components';
+import HomeView from '../src/components/Home-view/HomeView'
+import Header from '../src/components/Individual-Single-Components/Header/Header'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>MovieGoer App</h1>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <AppDiv>
+      <Header /> 
+      <HomeView /> 
+    </AppDiv>
+  )
 }
 
 export default App;
