@@ -28,8 +28,4 @@ class HomeView extends React.Component {
     }
 }
 
-<<<<<<< HEAD
 export default HomeView;
-=======
-export default HomeView;
->>>>>>> c12575a6052af5978e932a26edf503f497a1419e
