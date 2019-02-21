@@ -1,10 +1,27 @@
 import React from 'react';
-import {BackgroundDiv} from './styled-components';
+import {
+    BackgroundDiv,
+    BackgroundImgContent,
+    BackgroundImgText
+} from './styled-components';
 
 const Background = (props) => {
     return (
-        <BackgroundDiv>
-            <h1>JumboTron Image</h1>
+        <BackgroundDiv style={{
+                background:`
+                linear-gradient(to bottom, rgba(0,0,0,0)
+                39%,rgba(0,0,0,0)
+                41%,rgba(0,0,0,0.65)
+                100%),
+                url('${props.image}')
+            `
+        }}>
+            <BackgroundImgContent>
+                <BackgroundImgText>
+                    <h1>{props.title}</h1>
+                    <p>{props.text}</p>
+                </BackgroundImgText>
+            </BackgroundImgContent>
         </BackgroundDiv>
     )
 }

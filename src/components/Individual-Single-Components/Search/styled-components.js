@@ -1,6 +1,36 @@
 import styled from 'styled-components';
 
 export const SearchBarDiv = styled.div`
-    background: white;
+    width: 100%;
+    height: 105px;
+    background: #1c1c1c;
+    position: relative;
+    padding: 25px 20px 0px 20px;
+    box-sizing: border-box;
+    color: white;
+`;
+
+export const SearchContent = styled.div`
+    max-width: 1280px;
+    width: 100%;
+    height: 55px;
+    background:#353535;
+    margin: 0 auto;
+    border-radius: 40px;
+    position: relative;
+    color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`;
+
+export const SearchInput = styled.input`
+    font-size: 2.8rem;
+    position: absolute;   
+    border: 0;
+    background: transparent;
+    height: 40px;
+    color:white;  
+    text-align:center;
 `;
 
