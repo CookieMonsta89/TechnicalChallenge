@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieListDiv from './styled-components';
+import { MovieListDiv }from './styled-components';
 
 const MovieList = (props) => {
     return (

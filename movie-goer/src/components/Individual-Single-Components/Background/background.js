@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundDiv from './styled-components'
+import {BackgroundDiv} from './styled-components';
 
 const Background = (props) => {
     return (

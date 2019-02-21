@@ -1,6 +1,5 @@
 import React from 'react'
-import SearchBarDiv from './styled-components';
-import FontAwesome from 'react-fontawesome';
+import { SearchBarDiv } from './styled-components';
 
 
 class SearchBar extends React.Component {

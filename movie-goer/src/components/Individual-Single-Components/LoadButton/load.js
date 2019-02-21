@@ -1,5 +1,5 @@
 import React from 'react';
-import LoadButtonDiv from './styled-componets';
+import {LoadButtonDiv} from './styled-components';
 
 const LoadButton = (props) => {
     return (

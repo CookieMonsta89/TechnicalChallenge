@@ -18,7 +18,11 @@ class HomeView extends React.Component {
     render() {
         return (
             <HomeDiv>
-                <h1>HomeView</h1>
+                <Background /> 
+                <SearchBar />
+                <MovieList /> 
+                <LoadAnimate /> 
+                <LoadButton />
             </HomeDiv>
         )
     }

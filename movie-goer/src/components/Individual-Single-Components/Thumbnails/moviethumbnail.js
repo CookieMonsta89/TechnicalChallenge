@@ -1,5 +1,5 @@
 import React from 'react';
-import ThumbnailDiv from './styled-components'
+import {ThumbnailDiv} from './styled-components'
 
 const MovieThumbnail = (props) => {
     return (
@@ -8,3 +8,5 @@ const MovieThumbnail = (props) => {
         </ThumbnailDiv>
     )
 }
+
+export default MovieThumbnail;
