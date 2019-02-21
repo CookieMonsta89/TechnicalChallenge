@@ -26,7 +26,7 @@ export const BackgroundImgText = styled.div`
     max-width: 700px;
     position: absolute;
     bottom: 40px;
-    color: white;
+    color: #f4f4f3;
     font-family: sans-serif;
 
     h1 {

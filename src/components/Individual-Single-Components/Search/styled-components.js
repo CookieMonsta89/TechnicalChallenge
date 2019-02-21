@@ -7,7 +7,7 @@ export const SearchBarDiv = styled.div`
     position: relative;
     padding: 25px 20px 0px 20px;
     box-sizing: border-box;
-    color: white;
+    color: #f4f4f3
 `;
 
 export const SearchContent = styled.div`
@@ -30,7 +30,7 @@ export const SearchInput = styled.input`
     border: 0;
     background: transparent;
     height: 40px;
-    color:white;  
+    color:#f4f4f3  
     text-align:center;
 `;
 

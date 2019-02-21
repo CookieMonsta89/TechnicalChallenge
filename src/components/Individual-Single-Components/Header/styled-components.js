@@ -12,7 +12,7 @@ export const FlexDiv = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    color:white;
+    color:#f4f4f3
 
     @media(max-width:700px) {
         flex-direction:column;

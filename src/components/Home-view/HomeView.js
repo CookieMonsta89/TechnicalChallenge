@@ -66,17 +66,6 @@ class HomeView extends React.Component {
         
     }
 
-    loadMovies = () => {
-        let endpoint = '';
-        if (this.state.searchTerm === ' ') {
-            endpoint = `https://api.themoviedb.org/3/movie/popular?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=${this.state.currentPage + 1}`;
-        } else {
-            endpoint = `https://api.themoviedb.org/3/search/movie?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&query${this.state.searchTerm}&page=${this.state.currentPage + 1}`;
-        }
-        axios
-            .get(endpoint);
-    }
-
     render() {
         return (
             <HomeDiv>
@@ -99,7 +88,7 @@ class HomeView extends React.Component {
                                     image={param.poster_path ? `http://image.tmdb.org/t/p/w500${param.poster_path}` : null}
                                     movieId={param.id} 
                                     movieName={param.original_title}
-                        />
+                                />
                     })}
                     </MovieList>
                 </MovieListDiv>
