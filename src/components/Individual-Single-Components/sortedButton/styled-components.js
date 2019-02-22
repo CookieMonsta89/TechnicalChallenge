@@ -21,6 +21,7 @@ export const ButtonActive = styled.button`
     font-size:1.6rem;
     :focus {outline:0;}
     
+    
     @media(max-width:700px) {
         border-radius:0px;
         border:0;
