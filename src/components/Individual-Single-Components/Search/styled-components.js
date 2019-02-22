@@ -27,10 +27,14 @@ export const SearchContent = styled.div`
 export const SearchInput = styled.input`
     font-size: 2.8rem;
     position: absolute;   
-    border: 0;
+    border:0 solid #ffa300;
     background: transparent;
     height: 40px;
     color:#f4f4f3  
     text-align:center;
+    color: #ffa300;
+    font-size: 35px;
+    width:95%;
+
 `;
 

@@ -5,7 +5,7 @@ export const BackgroundDiv = styled.div`
     background-position: center, center !important;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
+    height: 776px;
     position: relative;
 
     @media(max-width: 700px) {
@@ -18,6 +18,9 @@ export const BackgroundImgContent = styled.div`
     max-width: 1280px;
     padding: 40px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   
 
 `;

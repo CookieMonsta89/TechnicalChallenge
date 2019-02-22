@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DetailContainer = styled.div`
     width:100%;
-    background: #423e3c
+    background: #393939
     height:auto;
 `;
 
@@ -11,6 +11,16 @@ export const DetailDiv = styled.div`
     display:flex;
     justify-content:center;
     align-items: center;
-    color:#f4f4f3
+    color:#ffa300
 
+`;
+
+export const InfoDiv = styled.div`
+    display:flex;
+    justify-content:space-around
+    width:100%;
+    
+    p {
+        font-size:1.6rem;
+    }
 `;

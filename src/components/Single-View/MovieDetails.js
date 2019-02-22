@@ -42,7 +42,7 @@ class MovieDetails extends React.Component {
         return ( 
             <div>
                 <MovieInfo info={this.state.movie} director={this.state.directors}/>
-                <DetailBar info={this.state.movie} />                
+                <DetailBar data={this.state.movie} />                
                 <Actor actors={this.state.actors}/>
             </div>
          );

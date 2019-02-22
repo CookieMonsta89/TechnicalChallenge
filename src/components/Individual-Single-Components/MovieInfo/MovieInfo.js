@@ -29,9 +29,9 @@ const MovieInfo = (props) => {
                     <p>{props.info.overview}</p>
                     <p>IMDB Rating:  {props.info.vote_average}  </p>
                     <p><strong>DIRECTORS</strong></p>
-                    {props.director.map((param) => {
+                    {props.director.map((param, i) => {
                         return (
-                            <p>{param.name}</p>
+                            <p key={i}>{param.name}</p>
                         )
                     })}
                     

@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <HeaderDiv>
             <FlexDiv>
-                <Link to='/'>
+                <Link to='/' >
                 <Logo alt='logo' src={logo} />
                 </Link>
                 <h1><strong><em>Ultimate</em></strong> MovieGoer</h1>
@@ -24,3 +24,4 @@ const Header = () => {
 }
 
 export default Header;
+

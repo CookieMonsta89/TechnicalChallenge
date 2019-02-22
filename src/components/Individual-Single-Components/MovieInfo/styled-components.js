@@ -9,7 +9,7 @@ export const MovieInfoDiv = styled.div`
     background-position: center, center !important;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
+    height: 776px;
     position: relative;
     display:flex;
     justify-content:center;
@@ -19,7 +19,8 @@ export const MovieInfoDiv = styled.div`
 export const OpacityDiv = styled.div`
     width:80%;
     height:auto;
-    background-color:rgb(66,62,60);opacity:0.9;
+    background-color:#0e0d0c;
+    opacity:0.75;
     color:#f4f4f3
     display:flex;
     justify-content:center;
