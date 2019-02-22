@@ -27,11 +27,10 @@ class HomeView extends React.Component {
         axios
             .get(getMovies)
             .then(res => {
-                if (this.mounted) {
                 this.setState({
                     movies: res.data.results, 
                     backgroundImage: this.state.backgroundImage || res.data.results[0],                    
-                })}
+                })
 
             })
     }
