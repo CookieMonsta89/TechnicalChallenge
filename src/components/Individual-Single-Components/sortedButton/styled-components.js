@@ -19,6 +19,7 @@ export const ButtonActive = styled.button`
     background:#1c1c1c;
     color:#ffa300;
     font-size:1.6rem;
+    :focus {outline:0;}
     
     @media(max-width:700px) {
         border-radius:0px;
@@ -37,6 +38,7 @@ export const Button = styled.button`
     font-size:1.6rem;
     color: #ffa300;
     border: 2px solid #ffa300;
+    :focus {outline:0;}
     
     @media(max-width:700px) {
         border-radius:0px;
