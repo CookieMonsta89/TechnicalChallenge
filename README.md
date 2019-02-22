@@ -32,10 +32,8 @@ To get the project up and running on your local machine, complete the following 
 ---
 
 #### Author
-| [**Joseph Stanfield**](https://github.com/CookieMonsta89) |
-|:----------------:|:----------------:|:---------------:|:---------------:|:---------------:|
-| [<img src="https://avatars3.githubusercontent.com/u/20689379?s=80" width="80">](https://github.com/CookieMonsta89)  |
-| [<img src="https://github.com/favicon.ico" width="15"> Github](https://github.com/CookieMonsta89) |
+[**Joseph Stanfield**](https://github.com/CookieMonsta89)
+
 ---
 
 #### Credits
