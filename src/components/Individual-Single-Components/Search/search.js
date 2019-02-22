@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
 
         this.timeout = setTimeout(() => {
             this.props.callback(this.state.value)
-        },500)
+        }) //setTimeout allows for search every 500 ms
     }
 
     render() {

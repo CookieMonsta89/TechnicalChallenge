@@ -13,8 +13,7 @@ const Background = (props) => {
                 39%,rgba(0,0,0,0)
                 41%,rgba(0,0,0,0.65)
                 100%),
-                url('${props.image}')
-            `
+                url('${props.image}')` //this style sets background to the image passed down from homeview. 
         }}>
             <BackgroundImgContent>
                 <BackgroundImgText>

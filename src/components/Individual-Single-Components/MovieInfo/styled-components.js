@@ -24,7 +24,7 @@ export const OpacityDiv = styled.div`
     color:#f4f4f3
     display:flex;
     justify-content:center;
-    padding:20px
+    padding:0 20px;
 
 `;
 

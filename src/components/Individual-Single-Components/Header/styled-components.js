@@ -25,6 +25,11 @@ export const FlexDiv = styled.div`
 
     h1 {
         font-size:2rem;
+        text-decoration:none;
+        color:#ffa300;
+        display:flex;
+        align-items:center;
+        
         @media(max-width:700px) {
             display:none
         }
@@ -32,9 +37,25 @@ export const FlexDiv = styled.div`
     
 `;
 
+export const TextDiv = styled.div`
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    @media(max-width:700px) {
+        display:none;
+    }
+
+    h2 {
+        font-family: cursive;
+        font-size: 4rem;
+        margin: 0;
+        }
+`;
+
 export const Logo = styled.img` 
-    width:25%;
+    width:40%;
     height:75%;
+    
     @media(max-width:700px) {
         height:75%;
         margin:0 auto;

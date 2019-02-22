@@ -3,11 +3,11 @@ import {
     HeaderDiv,
     FlexDiv,
     Logo, 
+    TextDiv
 } from './styled-components';
 import { Link } from 'react-router-dom'
 
 import logo from '../../../assets/logo.png'
-// logo is a placeholder for now
 
 
 const Header = () => {
@@ -15,9 +15,9 @@ const Header = () => {
         <HeaderDiv>
             <FlexDiv>
                 <Link to='/' >
-                <Logo alt='logo' src={logo} />
+                    <Logo alt='logo' src={logo} />
                 </Link>
-                <h1><strong><em>Ultimate</em></strong> MovieGoer</h1>
+                <TextDiv>Ultimate <h2>MovieGoer</h2></TextDiv>               
             </FlexDiv>
         </HeaderDiv>
     )

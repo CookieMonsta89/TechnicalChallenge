@@ -1,13 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {
+    NavDiv,
+    NavLinkDiv
+} from './styled-components';
 
-const Nav = (props) => {
+const Nav = () => {
     return ( 
-        <div>
-            <Link to='/'>
-                <p>Home</p>
-            </Link>
-        </div>
+        <NavDiv>
+            <NavLinkDiv>
+                <Link to='/'>
+                    <p>Home</p>
+                </Link>
+            </NavLinkDiv>
+        </NavDiv>
      );
 }
  

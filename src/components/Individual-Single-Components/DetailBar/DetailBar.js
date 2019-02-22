@@ -8,26 +8,25 @@ import {
 const DetailBar = (props) => {
 
     const currencyFormat = (param) => {
-        const array = param.toString(param).split('')
-        const next = array.splice(4, 0, ',').join('')
-        return next
+        return param.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+    //function for adding commas to number returned from database for revenue
+    
 
     return ( 
         <DetailContainer>
-        { props.data ? (
+        {props.data ? (
             <DetailDiv>
                 <InfoDiv>
-                <p>Runtime: {props.data.runtime} minutes</p>
-                <p>Revenue: ${props.data.revenue}</p>
-                <p>Release: {props.data.release_date}</p>
+                <p><strong>Runtime:</strong> {props.data.runtime} minutes</p>
+                <p><strong>Revenue:</strong> ${currencyFormat(props.data.revenue)}</p>
+                <p><strong>Release:</strong> {props.data.release_date}</p>
                 </InfoDiv>
             </DetailDiv>) : null}
         
         
-        </DetailContainer>
-    
-        )
+        </DetailContainer>    
+    )
 }
  
 export default DetailBar;
