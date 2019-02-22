@@ -8,7 +8,7 @@ export const HeaderDiv = styled.div`
 `;
 
 export const FlexDiv = styled.div`
-    width:90%;
+    width:85%;
     display:flex;
     justify-content:space-between;
     align-items:center;
