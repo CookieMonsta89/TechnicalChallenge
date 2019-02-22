@@ -11,7 +11,6 @@ export const DetailDiv = styled.div`
     display:flex;
     justify-content:center;
     align-items: center;
-    color:#ffa300
 
 `;
 
@@ -26,6 +25,7 @@ export const InfoDiv = styled.div`
     
     p {
         font-size:1.6rem;
+        color:white;
         
         @media(max-width:1000px) {
             display: flex;

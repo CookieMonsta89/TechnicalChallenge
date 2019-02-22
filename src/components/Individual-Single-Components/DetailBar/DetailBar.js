@@ -4,6 +4,8 @@ import {
     DetailDiv,
     InfoDiv
 } from './styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faMoneyBill, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 const DetailBar = (props) => {
 
@@ -18,9 +20,9 @@ const DetailBar = (props) => {
         {props.data ? (
             <DetailDiv>
                 <InfoDiv>
-                <p><strong>Runtime:</strong> {props.data.runtime} minutes</p>
-                <p><strong>Revenue:</strong> ${currencyFormat(props.data.revenue)}</p>
-                <p><strong>Release:</strong> {props.data.release_date}</p>
+                <p><FontAwesomeIcon style={fontAwesomeSpan} icon={faClock} /> <strong>Runtime:</strong> {props.data.runtime} minutes</p>
+                <p><FontAwesomeIcon style={fontAwesomeSpan} icon={faMoneyBill} /> <strong>Revenue:</strong> ${currencyFormat(props.data.revenue)}</p>
+                <p><FontAwesomeIcon style={fontAwesomeSpan} icon={faCalendarAlt} /> <strong>Release:</strong> {props.data.release_date}</p>
                 </InfoDiv>
             </DetailDiv>) : null}
         
@@ -30,3 +32,7 @@ const DetailBar = (props) => {
 }
  
 export default DetailBar;
+
+const fontAwesomeSpan = {
+    color:'orange'
+}

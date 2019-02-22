@@ -6,11 +6,11 @@ const MovieThumbnail = (props) => {
     return (
         <ThumbnailDiv>
         {props.clickable ?
-            <Link to={{pathname:`/${props.movieId}`, movieName: `${props.movieName}`}}>
+            <Link to={`/${props.movieId}`}>
                 <img style={imgStyle} src={props.image} alt='moviethumb' /> 
             </Link>
             :
-            <Link to={{pathname:`/${props.movieId}`, movieName: `${props.movieName}`}}>
+            <Link to={`/${props.movieId}`}>
                 <img style={imgStyle} src={props.image} alt='moviethumb' /> 
             </Link>
         }

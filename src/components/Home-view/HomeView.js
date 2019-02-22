@@ -23,6 +23,7 @@ class HomeView extends React.Component {
     }
 
     componentDidMount = () => {
+        console.log("first")
         const getMovies = `https://api.themoviedb.org/3/movie/popular?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=1`; //will grab the most popular movies 
         axios
             .get(getMovies)
@@ -35,20 +36,6 @@ class HomeView extends React.Component {
             })
     }
 
-
-    componentDidUpdate = () => {
-        if (this.state.searchTerm === '') {  //removes buttons if searchTerm exists
-        const getMovies = `https://api.themoviedb.org/3/movie/${this.state.sortBy}?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=1`; //will grab the most popular movies 
-        axios
-            .get(getMovies)
-            .then(res => {
-                this.setState({
-                    movies: res.data.results, 
-                    backgroundImage: this.state.backgroundImage || res.data.results[0],                    
-                })
-            })
-        }
-    }
 
     itemSearch = (searchTerm) => {
         let route = '';
@@ -75,9 +62,20 @@ class HomeView extends React.Component {
 
     updateSort = (e) => {
         e.preventDefault();
-        this.setState({
-            sortBy: e.target.name
-        })
+        const target = e.target.name
+        console.log('second')
+        if (this.state.searchTerm === '') {  //removes buttons if searchTerm exists
+        const getMovies = `https://api.themoviedb.org/3/movie/${target}?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=1`; //will grab the most popular movies 
+        axios
+            .get(getMovies)
+            .then(res => {
+                this.setState({
+                    movies: res.data.results, 
+                    backgroundImage: this.state.backgroundImage || res.data.results[0],    
+                    sortBy:target             
+                })
+            })
+        }
 
     }
     //update sort needs access to the state and will be passed to sortButton.
@@ -109,8 +107,7 @@ class HomeView extends React.Component {
                                     key={i}
                                     clickable={true}
                                     image={param.poster_path ? `http://image.tmdb.org/t/p/w500${param.poster_path}` : null}
-                                    movieId={param.id} 
-                                    movieName={param.original_title}
+                                    movieId={param.id}
                                 />
                     })}
                     </MovieList>                    
