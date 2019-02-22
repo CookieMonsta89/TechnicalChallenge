@@ -53,7 +53,7 @@ export const TextDiv = styled.div`
 `;
 
 export const Logo = styled.img` 
-    width:40%;
+    width:30%;
     height:75%;
     
     @media(max-width:700px) {
