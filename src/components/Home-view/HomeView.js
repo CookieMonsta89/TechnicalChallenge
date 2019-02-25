@@ -72,7 +72,9 @@ class HomeView extends React.Component {
                 this.setState({
                     movies: res.data.results, 
                     backgroundImage: this.state.backgroundImage || res.data.results[0],    
-                    sortBy:target             
+                    sortBy:target,
+                    backgroundImage: res.data.results[0]
+
                 })
             })
         }
