@@ -23,7 +23,6 @@ class HomeView extends React.Component {
     }
 
     componentDidMount = () => {
-        console.log("first")
         const getMovies = `https://api.themoviedb.org/3/movie/popular?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=1`; //will grab the most popular movies 
         axios
             .get(getMovies)
@@ -63,15 +62,13 @@ class HomeView extends React.Component {
     updateSort = (e) => {
         e.preventDefault();
         const target = e.target.name
-        console.log('second')
         if (this.state.searchTerm === '') {  //removes buttons if searchTerm exists
         const getMovies = `https://api.themoviedb.org/3/movie/${target}?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=1`; //will grab the most popular movies 
         axios
             .get(getMovies)
             .then(res => {
                 this.setState({
-                    movies: res.data.results, 
-                    backgroundImage: this.state.backgroundImage || res.data.results[0],    
+                    movies: res.data.results,     
                     sortBy:target,
                     backgroundImage: res.data.results[Math.floor(Math.random() * 20)]
 
