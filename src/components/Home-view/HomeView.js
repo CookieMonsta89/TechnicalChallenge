@@ -30,7 +30,7 @@ class HomeView extends React.Component {
             .then(res => {
                 this.setState({
                     movies: res.data.results, 
-                    backgroundImage: this.state.backgroundImage || res.data.results[0],                    
+                    backgroundImage: this.state.backgroundImage || res.data.results[Math.floor(Math.random() * 20)],                    
                 })
 
             })
@@ -73,7 +73,7 @@ class HomeView extends React.Component {
                     movies: res.data.results, 
                     backgroundImage: this.state.backgroundImage || res.data.results[0],    
                     sortBy:target,
-                    backgroundImage: res.data.results[0]
+                    backgroundImage: res.data.results[Math.floor(Math.random() * 20)]
 
                 })
             })
