@@ -10,7 +10,12 @@ import MovieList from '../Individual-Single-Components/MovieGrid/MovieList';
 import SearchBar from '../Individual-Single-Components/Search/search';
 import MovieThumbnail from '../Individual-Single-Components/Thumbnails/moviethumbnail';
 import SortButton from '../Individual-Single-Components/sortedButton/sortedBtn';
+import ReactGA from 'react-ga'
 
+function initializeReactGA() {
+    ReactGA.initialize('UA-135427594-1');
+    ReactGA.pageview('/');
+  }
 
 
 class HomeView extends React.Component {
@@ -23,6 +28,7 @@ class HomeView extends React.Component {
     }
 
     componentDidMount = () => {
+        initializeReactGA();
         const getMovies = `https://api.themoviedb.org/3/movie/popular?api_key=036b0cc475e78b3c1534667fd1c67e97&language=en-US&page=1`; //will grab the most popular movies 
         axios
             .get(getMovies)
