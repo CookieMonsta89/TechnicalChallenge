@@ -6,12 +6,12 @@ import { Route, Switch } from 'react-router-dom'
 import MovieDetails from './components/Single-View/MovieDetails';
 import ReactGA from 'react-ga';
 
-const App = () => {
-
-  function initializeReactGA() {
-    ReactGA.initialize('UA-135427594-1');
-    ReactGA.pageview('/');
+function initializeReactGA() {
+  ReactGA.initialize('UA-135427594-1');
+  ReactGA.pageview('/');
 }
+
+const App = () => {
 
 
   return (
