@@ -11,6 +11,7 @@
     "react-browser-router": "^2.1.2",
     "react-dom": "^16.8.2",
     "react-fontawesome": "^1.6.1",
+    "react-ga": "^2.5.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
