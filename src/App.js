@@ -6,12 +6,14 @@ import { Route, Switch } from 'react-router-dom'
 import MovieDetails from './components/Single-View/MovieDetails';
 
 
+
+
 const App = () => {
 
 
   return (
-    <AppDiv>
-        <Header />
+    <AppDiv>     
+        <Header />      
         <Switch>
           <Route path="/" component={HomeView} exact />
           <Route path="/:movieId" component={MovieDetails} exact />

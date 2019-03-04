@@ -14,7 +14,6 @@ const MovieThumbnail = (props) => {
                 <img style={imgStyle} src={props.image} alt='moviethumb' /> 
             </Link>
         }
-
         </ThumbnailDiv>
     )
 }

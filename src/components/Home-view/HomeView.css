@@ -1,0 +1,10 @@
+.AppearTransition-appear {
+    opacity: 0.01;
+    
+}
+
+.AppearTransition-appear.AppearTransition-appear-active {
+    opacity: 1;    
+    transition: all 2s ease-out;
+}
+

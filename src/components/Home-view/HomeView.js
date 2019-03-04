@@ -11,6 +11,8 @@ import SearchBar from '../Individual-Single-Components/Search/search';
 import MovieThumbnail from '../Individual-Single-Components/Thumbnails/moviethumbnail';
 import SortButton from '../Individual-Single-Components/sortedButton/sortedBtn';
 import ReactGA from 'react-ga'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import './HomeView.css';
 
 function initializeReactGA() {
     ReactGA.initialize('UA-135427594-1');
@@ -96,26 +98,37 @@ class HomeView extends React.Component {
             <HomeDiv>
             {this.state.backgroundImage ? 
                 <BackgroundDiv>
-                    <Background 
-                        image={`http://image.tmdb.org/t/p/w1280${this.state.backgroundImage.backdrop_path}`}
-                        title={this.state.backgroundImage.original_title}
-                        text={this.state.backgroundImage.overview}/> 
-                    <SearchBar callback={this.itemSearch} />
+                    <ReactCSSTransitionGroup
+                        transitionName='AppearTransition'
+                        transitionAppear={true}
+                        transitionAppearTimeout={2000}
+                        transitionEnter={false}
+                        transitionLeave={false}
+                    >
+                        <Background 
+                            image={`http://image.tmdb.org/t/p/w1280${this.state.backgroundImage.backdrop_path}`}
+                            title={this.state.backgroundImage.original_title}
+                            text={this.state.backgroundImage.overview}/> 
+                        <SearchBar callback={this.itemSearch} />
+                    </ReactCSSTransitionGroup>
                 </BackgroundDiv> : null}
                 <MovieListDiv>
                 {this.state.searchTerm ? null : <SortButton active={this.state.sortBy} updateSort={this.updateSort}/>}
                     <MovieList 
-                        header={this.state.searchTerm ? 'Search Results': `${this.upperCaseSort(this.state.sortBy)} MOVIES`}                
+                        header={this.state.searchTerm ? 'Search Results': `${this.upperCaseSort(this.state.sortBy)} MOVIES`}               
                     >
-                    {this.state.movies.map((param, i) => {
-                        return <MovieThumbnail
-                                    key={i}
-                                    clickable={true}
-                                    image={param.poster_path ? `http://image.tmdb.org/t/p/w500${param.poster_path}` : null}
-                                    movieId={param.id}
-                                />
+                        {this.state.movies.map((param, i) => {
+                            return (
+                                    <MovieThumbnail
+                                        key={i}
+                                        clickable={true}
+                                        image={param.poster_path ? `http://image.tmdb.org/t/p/w500${param.poster_path}` : null}
+                                        movieId={param.id}
+                                    />
+                            )
+                                
                     })}
-                    </MovieList>                    
+                    </MovieList>                   
                 </MovieListDiv>
             </HomeDiv>
         )

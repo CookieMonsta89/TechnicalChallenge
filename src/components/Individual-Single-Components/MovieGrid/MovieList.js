@@ -4,6 +4,8 @@ import {
     MovieContent,
     MappedMovies
  } from './styled-components';
+ 
+
 
 
 
@@ -31,3 +33,6 @@ const MovieList = (props) => {
 }
 
 export default MovieList;
+
+
+                        
