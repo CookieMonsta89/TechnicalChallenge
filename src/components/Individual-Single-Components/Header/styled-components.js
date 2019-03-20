@@ -5,8 +5,6 @@ export const HeaderDiv = styled.div`
     width:100%;
     display:flex;
     justify-content:center;
-    position:fixed;
-    top:0;
     z-index: 1;
 
     @media(max-width:700px) {
